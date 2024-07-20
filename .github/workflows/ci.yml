@@ -41,7 +41,7 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=4096
 
-      - run: pnpm dlx pkg-pr-new publish './packages/*/build' './packages/markdown' './packages/mui-babel-macros' './packages-internal/*' --template './examples/*' --pnpm --comment=off
+      - run: pnpm dlx pkg-pr-new publish './packages/*/build' './packages/markdown' './packages/mui-babel-macros' --template './examples/*' --pnpm --comment=off
 
       - run: pnpm release:changelog
         env:
