@@ -41,7 +41,7 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=4096
 
-      - run: pnpm dlx pkg-pr-new@https://c1cf03bb.stackblitz-cr.pages.dev/stackblitz-labs/pkg.pr.new/pkg-pr-new@154 publish './packages/*' --template './examples/*' --compact --pnpm --comment=off
+      - run: pnpm dlx pkg-pr-new@https://c1cf03bb.stackblitz-cr.pages.dev/stackblitz-labs/pkg.pr.new/pkg-pr-new@154 publish './packages/*/build' './packages/markdown' './packages-internal/*' --template './examples/*' --compact --pnpm --comment=off
 
       - run: pnpm release:changelog
         env:
