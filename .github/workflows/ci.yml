@@ -34,6 +34,7 @@ jobs:
 
       - run: pnpm build:codesandbox
 
+
       - run: pnpm dlx pkg-pr-new@https://21a4e54f.stackblitz-cr.pages.dev/stackblitz-labs/pkg.pr.new/pkg-pr-new@154 publish 'packages/mui-{base,codemod,core-downloads-tracker,docs,icons-material,lab,material-nextjs,material,private-theming,styled-engine,styled-engine-sc,styles,system,types,utils}/build' 'packages-internal/{test-utils,docs-utils,scripts}' 'packages/{mui-babel-macros,markdown}' --template './examples/*' --pnpm --comment=off
 
   # Tests dev-only scripts across all supported dev environments
